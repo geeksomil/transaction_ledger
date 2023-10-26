@@ -1,0 +1,27 @@
+
+#main{
+    margin-top:10rem;
+    margin-left:10rem;
+    display: flex;
+}
+img{
+    width: 35vw;
+}
+header{
+    margin: 5rem;
+    width:40%;
+    font-size: 5rem;
+}
+#playnow{
+    background-color: black;
+    color: white;
+    height: 2.5rem;
+    
+}
+#btns{
+    float: right;
+    margin-right: 3rem;
+}
+#btns button{
+    height:2.5rem
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+    <div id="main">
+        <header>LEADERBOARD</header>
+        <div id="r1"><img src="crown1.png" alt="">
+            <div id="name1"> RANK1 : player1</div>
+        </div>
+        <div id="r2"><img src="crown2.png" alt="">
+            <div id="name2"> RANK2 : player2</div>
+        </div>
+        <div id="r3"><img src="crown3.png" alt="">
+            <div id="name3"> RANK3: player3</div>
+        </div>
+        <div id="r4"> <img src="joker.jpeg" alt="">
+            <div id="name4"> RANK4: player4 </div>
+        </div>
+    </div>
+    <div id="btns">
+        <button>
+            PLAY NEW GAME
+        </button>
+        <button>
+            BACK TO HOME PAGE
+        </button>
+    </div>
+    <script>
+        let obj = {
+            "red": "player1",
+            "blue": "player2",
+            "green": "player3",
+            "yellow": "player4"
+        }
+        rankarr = localStorage.getItem("rankarr");
+        for (let i = 0; i < 4; i++) {
+            document.getElementById("name" + (i + 1)).innerText = "RANK" + i + "         " + obj[rankarr[i]];
+        }
+        console.log(rankarr);
+    </script>
+</body>
+
+</html>

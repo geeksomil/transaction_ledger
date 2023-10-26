@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(20,37,80);
+    
+    background-size: cover;
+    color: white;
+}
+#main{
+    width:60vw;
+    border:1px solid black;
+    height: 70vh;
+    position: relative;
+    border: 2px solid #5875f7;
+    
+    margin: auto;
+    margin-top:10vh;
+}
+#main div{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    margin-top: 2.2rem;
+}
+header{
+    position: absolute;
+    font-size: 2.5rem;
+    top:-1.5rem;
+    width: fit-content;
+    left:34%;
+    border: 2px solid #5875f7;
+    border-radius: 20px;
+    background-color:rgb(20,37,80) ;
+    color:#74cdeb;
+}
+img{
+    height: 5rem;
+    width: 5rem;
+    margin-right: 2.2rem;
+}
+#btns{
+    margin: auto;
+    width: fit-content;
+}

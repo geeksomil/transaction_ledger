@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div id="quit" title="quit">
+      ↩️
+    </div>
+    <div id="save" title="save progress">
+      💾
+    </div>
+    <div id="delete" title="delete progress">
+      ⌫
+    </div>
+  </nav>
+
+  <div id="quitalert">
+    <div>
+      DO YOU WANT TO QUIT GAME
+    </div>
+    <div>
+      <button id="quityes">YES</button>
+      <button id="quitno">NO</button>
+    </div>
+  </div>
+  <div id="deletealert">
+    <div>
+      DO YOU WANT TO DELETE PROGRESS
+    </div>
+    <div>
+      <button id="delyes">YES</button>
+      <button id="delno">NO</button>
+    </div>
+  </div>
+  <div id="main">
+    <div id="blue" class="border">
+      <header class="playerh">PLAYER 2</header>
+      <div class="circle">
+        <table>
+          <tr>
+            <td id=" pb1">
+              <div id="pb1" class="pawn">
+                <div id="pb1 " style=" background-color: #046198"></div>
+              </div>
+            </td>
+            <td id=" pb2">
+              <div id="pb2" class="pawn">
+                <div id="pb2 " style="background-color: #046198"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id=" pb3">
+              <div id="pb3" class="pawn">
+                <div id="pb3 " style=" background-color: #046198"></div>
+              </div>
+            </td>
+            <td id=" pb4">
+              <div id="pb4" class="pawn">
+                <div id="pb4 " style=" background-color: #046198"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="redarea">
+      <div class='grid border' id="49"></div>
+      <div class='grid border' id="50"></div>
+      <div class='grid border' id="51"></div>
+      <div class='grid border' id="48"></div>
+      <div class='grid border' id="52" style="background-color:#eb6002 "></div>
+      <div class='grid border' id="0" style="background-color: #eb6002"></div>
+      <div class='grid border' id="47"></div>
+      <div class='grid border' id="53" style="background-color: #eb6002"></div>
+      <div class='grid border' id="1"></div>
+      <div class='grid border' id="46"></div>
+      <div class='grid border' id="54" style="background-color: #eb6002"></div>
+      <div class='grid border' id="2"></div>
+      <div class='grid border' id="45"></div>
+      <div class='grid border' id="55" style="background-color: #eb6002"></div>
+      <div class='grid border' id="3"></div>
+      <div class='grid border' id="44"></div>
+      <div class='grid border' id="56" style="background-color: #eb6002"></div>
+      <div class='grid border' id="4"></div>
+    </div>
+    <div id="red" class="border">
+      <header class="playerh">PLAYER 1</header>
+      <div class="circle">
+        <table>
+          <tr>
+            <td id=" pr1">
+              <div id="pr1" class="pawn">
+                <div id="pr1 " style=" background-color: #eb6002"></div>
+              </div>
+      </div>
+      </td>
+      <td id=" pr2">
+        <div id="pr2" class="pawn">
+          <div id="pr2 " style=" background-color: #eb6002"></div>
+        </div>
+      </td>
+      </tr>
+      <tr>
+        <td id=" pr3">
+          <div id="pr3" class="pawn">
+            <div id="pr3 " style=" background-color: #eb6002"></div>
+          </div>
+        </td>
+        <td id=" pr4">
+          <div>
+            <div id="pr4" class="pawn">
+              <div id="pr4 " style=" background-color: #eb6002"></div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+  <div id="bluearea">
+    <div class='grid border' id="38"></div>
+    <div class='grid border' id="39" style="background-color: #046198"></div>
+    <div class='grid border' id="40"></div>
+    <div class='grid border' id="41"></div>
+    <div class='grid border' id="42"></div>
+    <div class='grid border' id="43"></div>
+    <div class='grid border' id="37"></div>
+    <div class='grid border' id="70" style="background-color: #046198"></div>
+    <div class='grid border' id="71" style="background-color: #046198"></div>
+    <div class='grid border' id="72" style="background-color: #046198"></div>
+    <div class='grid border' id="73" style="background-color: #046198"></div>
+    <div class='grid border' id="74" style="background-color: #046198"></div>
+    <div class='grid border' id="36"></div>
+    <div class='grid border' id="35"></div>
+    <div class='grid border' id="34"></div>
+    <div class='grid border' id="33"></div>
+    <div class='grid border' id="32"></div>
+    <div class='grid border' id="31"></div>
+  </div>
+  <div id="win">
+    <div class="grid" id="57" style="margin:auto"></div>
+    <div class="grid" id="75" style="float:left"></div>
+    <div class="grid" id="63" style="float:right"></div>
+    <div class="grid" id="" style="margin:auto"></div>
+    <div class="grid" id="69" style="margin:auto"></div>
+  </div>
+  <div id="greenarea">
+    <div class='grid border' id="5"></div>
+    <div class='grid border' id="6"></div>
+    <div class='grid border' id="7"></div>
+    <div class='grid border' id="8"></div>
+    <div class='grid border' id="9"></div>
+    <div class='grid border' id="10"></div>
+    <div class='grid border' id="62" style="background-color:#219633"></div>
+    <div class='grid border' id="61" style="background-color:#219633"></div>
+    <div class='grid border' id="60" style="background-color:#219633"></div>
+    <div class='grid border' id="59" style="background-color:#219633"></div>
+    <div class='grid border' id="58" style="background-color:#219633"></div>
+    <div class='grid border' id="11"></div>
+    <div class='grid border' id="17"></div>
+    <div class='grid border' id="16"></div>
+    <div class='grid border' id="15"></div>
+    <div class='grid border' id="14"></div>
+    <div class='grid border' id="13" style="background-color:#219633"></div>
+    <div class='grid border' id="12"></div>
+  </div>
+  <div id="yellow" class="border">
+    <header class="playerh">PLAYER 4</header>
+    <div class="circle">
+      <table>
+        <tr>
+          <td id=" py1">
+            <div id="py1" class="pawn">
+              <div id="py1 " style=" background-color: #faf110"></div>
+            </div>
+          </td>
+          <td id=" py2">
+            <div id="py2" class="pawn">
+              <div id="py2 " style=" background-color: #faf110"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id=" py3">
+            <div id="py3" class="pawn">
+              <div id="py3 " style=" background-color: #faf110"></div>
+            </div>
+          </td>
+          <td id=" py4">
+            <div id="py4" class="pawn">
+              <div id="py4 " style=" background-color: #faf110"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="yellowarea">
+    <div class='grid border' id="30"></div>
+    <div class='grid border' id="68" style="background-color: #faf110"></div>
+    <div class='grid border' id="18"></div>
+    <div class='grid border' id="29"></div>
+    <div class='grid border' id="67" style="background-color: #faf110"></div>
+    <div class='grid border' id="19"></div>
+    <div class='grid border' id="28"></div>
+    <div class='grid border' id="66" style="background-color: #faf110"></div>
+    <div class='grid border' id="20"></div>
+    <div class='grid border' id="27"></div>
+    <div class='grid border' id="65" style="background-color: #faf110"></div>
+    <div class='grid border' id="21"></div>
+    <div class='grid border' id="26" style="background-color: #faf110"></div>
+    <div class='grid border' id="64" style="background-color: #faf110"></div>
+    <div class='grid border' id="22"></div>
+    <div class='grid border' id="25"></div>
+    <div class='grid border' id="24"></div>
+    <div class='grid border' id="23"></div>
+  </div>
+  <div id="green" class="border">
+    <header class="playerh">PLAYER 3</header>
+    <div class="circle">
+      <table>
+        <tr>
+          <td id=" pg1">
+            <div id="pg1" class="pawn">
+              <div id="pg1 " style="background-color: #219633"></div>
+            </div>
+          </td>
+          <td id=" pg2">
+            <div id="pg2" class="pawn">
+              <div id="pg2 " style="background-color: #219633"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id=" pg3">
+            <div id="pg3" class="pawn">
+              <div id="pg3 " style="background-color: #219633"></div>
+            </div>
+          </td>
+          <td id=" pg4">
+            <div id="pg4" class="pawn">
+              <div id="pg4 " style="background-color: #219633"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+  <div class="panel">
+    <div class="dice">
+      <div class="side one">
+        <span class="dot"></span>
+      </div>
+      <div class="side two">
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="side three">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="side four">
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="side five">
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="kolona">
+          <span class="dot"></span>
+        </div>
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="side six">
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="kolona">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
